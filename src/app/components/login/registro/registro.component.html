@@ -1,0 +1,119 @@
+<!-- search overlay Registro-->
+<div id="reggg">
+
+    <div class="search-overlay">
+
+    </div>
+
+
+
+
+
+    <!-- Content
+    ================================================== -->
+    <div uk-height-viewport="expand: true" class="uk-flex uk-flex-middle">
+        <div class="uk-width-1-3@m uk-width-1-2@s m-auto">
+            <div class="uk-card-default p-5 rounded ajuste-card">
+                <div class="cruz ">
+                    <a routerLink="inizio">
+                        <span class="icon-feather-x btn-close uk-animation-scale-up"></span>
+                    </a>
+
+                </div>
+                <div class="mb-2 uk-text-center">
+                    <h3 class="mb-0"> Crear nueva cuenta</h3>
+                    <p class="my-2">Login to manage your account.</p>
+                </div>
+                <form class="uk-child-width-1-1 uk-grid-small" uk-grid>
+
+                    <div>
+                        <div class="uk-form-group">
+                            <label class="uk-form-label"> Usuario</label>
+
+                            <div class="uk-position-relative w-100">
+                                <span class="uk-form-icon">
+                                    <i class="icon-feather-user"></i>
+                                </span>
+                                <input class="uk-input" type="text" name="nikname" [(ngModel)]="usuario.NIKNAME" placeholder="Apodo">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-form-group">
+                            <label class="uk-form-label"> Formacion</label>
+
+                            <div class="uk-position-relative w-100">
+                                <span class="">
+                                    
+                                </span>
+                                <!-- <input class="uk-input" type="text" placeholder="Apodo">-->
+                                <select class="uk-input" name="formacion" ngModel="usuario.formacion" id="cars">
+                                            <option value="" selected>--</option>
+                                            <option value="Estudios Superiores">Estudios Superiores</option>
+                                            <option value="Colegio">Colegio</option>
+                                            <option value="Tecnico">Tecnico</option>
+                                          </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-form-group">
+                            <label class="uk-form-label"> Email</label>
+
+                            <div class="uk-position-relative w-100">
+                                <span class="uk-form-icon">
+                                    <i class="icon-feather-mail"></i>
+                                </span>
+                                <input class="uk-input" type="email" name="email" [(ngModel)]="usuario.EMAIL" placeholder="name@example.com">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <div class="uk-form-group">
+                            <label class="uk-form-label"> contraseña</label>
+
+                            <div class="uk-position-relative w-100">
+                                <span class="uk-form-icon">
+                                    <i class="icon-feather-lock"></i>
+                                </span>
+                                <input class="uk-input" type="password" name="password" [(ngModel)]="usuario.PASSWORD" placeholder="********">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <div class="uk-form-group">
+                            <label class="uk-form-label"> Confirmar Contraseña</label>
+
+                            <div class="uk-position-relative w-100">
+                                <span class="uk-form-icon">
+                                    <i class="icon-feather-lock"></i>
+                                </span>
+                                <input class="uk-input" type="password" name="confpassword" [(ngModel)]="confpassword" placeholder="********">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mt-0 uk-flex-middle uk-grid-small" uk-grid>
+                            <div class="uk-width-expand@s">
+                                <p> Dont have account <a href="#" routerLink="/login/login">Sign up</a></p>
+                            </div>
+                            <div class="uk-width-auto@s uk-align-center">
+
+                                <button class="btn btn-default asddd" role="button" (click)='create()' uk-toggle="target: #reggg; cls: is-active">Crear</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
